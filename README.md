@@ -33,9 +33,14 @@ Output:
 Your age is: 24 years, 0 months, and 1 day.
 
 💡 Technologies & Concepts Used
+
 ✅ C++ – Core programming language
+
 ✅ Control Structures – If-else conditions for age calculation
+
 ✅ Functions – isLeapYear() and daysInMonth() for date handling
+
 ✅ Date Algorithms – Handles different month lengths and leap years
+
 ✅ User Input Handling – Ensures valid dates before calculations
 
