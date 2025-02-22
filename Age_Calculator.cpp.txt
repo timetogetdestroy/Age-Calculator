@@ -1,0 +1,51 @@
+include <iostream>
+using namespace std;
+ 
+bool isLeapYear(int year) {
+   return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+ 
+int daysInMonth(int month, int year) {
+   if (month == 2) {
+       return isLeapYear(year) ? 29 : 28;
+   }
+   else if (month == 4 || month == 6 || month == 9 || month == 11) {
+       return 30;
+   }
+   else {
+       return 31;
+   }
+}
+ 
+int main() {
+int currentYear, currentMonth, currentDay;
+   int birthYear, birthMonth, birthDay;
+ 
+   cout << "Enter the current year, month, and day (separated by a space): ";
+   cin >> currentYear >> currentMonth >> currentDay;
+ 
+   cout << "Enter your birth year, month, and day (separated by a space): ";
+   cin >> birthYear >> birthMonth >> birthDay;
+ 
+   if (birthYear <= 0 || birthYear > currentYear || birthMonth < 1 || birthMonth > 12 || birthDay < 1 || birthDay > daysInMonth(birthMonth, birthYear)) {
+       cout << "Invalid birth date. Please enter valid values.\n";
+       return 1;
+   }
+ 
+   int ageInYears = currentYear - birthYear;
+   int ageInMonths = currentMonth - birthMonth;
+   int ageInDays = currentDay - birthDay;
+ 
+   if (ageInDays < 0) {
+       ageInMonths--;
+       ageInDays += daysInMonth(currentMonth - 1, currentYear);
+   }
+ 
+   if (ageInMonths < 0) {
+       ageInYears--;
+       ageInMonths += 12;
+   }
+ 
+   cout << "Your age is: " << ageInYears << " years, " << ageInMonths << " months, and " << ageInDays << " days.\n";
+   return 0;
+}
