@@ -5,7 +5,7 @@ A simple C++ program that calculates a person's age in years, months, and days b
 ⚙️ How to Run the Code
 Download the Source Code
 Clone this repository using:
-git clone https://github.com/yourusername/Age-Calculator.git
+git clone https://github.com/timetogetdestroy/Age-Calculator.git
 
 Example Input & Output
 Example 1 (Normal Case)
